@@ -1,9 +1,9 @@
-    document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
         // Check if there are saved details
         if(localStorage.getItem("savedUsername") && localStorage.getItem("savedPassword")) {
             var existingButton = document.createElement("button");
             existingButton.id = "existing";
-            existingButton.textContent = "Login as existing user.";
+            existingButton.textContent = "Login as existing user";
             existingButton.addEventListener("click", function() {
                 alert("Logged in as " + localStorage.getItem("savedUsername"));
             });
@@ -34,4 +34,4 @@
             // Reload the page to show the "Login as existing user" button if needed
             location.reload();
         });
-    });
+    }, 100);
