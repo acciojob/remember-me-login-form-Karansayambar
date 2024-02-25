@@ -1,5 +1,6 @@
-//your JS code here. If required.
- if(localStorage.getItem("savedUsername") && localStorage.getItem("savedPassword")) {
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check if there are saved details
+        if(localStorage.getItem("savedUsername") && localStorage.getItem("savedPassword")) {
             var existingButton = document.createElement("button");
             existingButton.id = "existing";
             existingButton.textContent = "Login as existing user";
@@ -33,3 +34,4 @@
             // Reload the page to show the "Login as existing user" button if needed
             location.reload();
         });
+    });
