@@ -1,13 +1,13 @@
     setTimeout(function() {
         // Check if there are saved details
         if(localStorage.getItem("savedUsername") && localStorage.getItem("savedPassword")) {
-            var existingButton = document.createElement("button");
-            existingButton.id = "existing";
-            existingButton.textContent = "Login as existing user";
-            existingButton.addEventListener("click", function() {
+            var existing = document.createElement("button");
+            existing.id = "existing";
+            existing.textContent = "Login as existing user";
+            existing.addEventListener("click", function() {
                 alert("Logged in as " + localStorage.getItem("savedUsername"));
             });
-            document.body.appendChild(existingButton);
+            document.body.appendChild(existing);
         }
 
         // Form submission handling
