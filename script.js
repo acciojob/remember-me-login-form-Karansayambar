@@ -3,7 +3,7 @@
         if(localStorage.getItem("savedUsername") && localStorage.getItem("savedPassword")) {
             var existingButton = document.createElement("button");
             existingButton.id = "existing";
-            existingButton.textContent = "Login as existing user";
+            existingButton.textContent = "Login as existing user.";
             existingButton.addEventListener("click", function() {
                 alert("Logged in as " + localStorage.getItem("savedUsername"));
             });
